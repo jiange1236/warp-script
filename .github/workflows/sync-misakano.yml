@@ -1,4 +1,4 @@
-name: Sync from GitLab to GitHub  
+name: Sync from gitlab.com/Misaka-blog to GitHub
   
 on:  
   workflow_dispatch:  
