@@ -25,8 +25,11 @@ jobs:
         shell: bash  
   
       - name: Checkout to new branch and push to GitHub  
-        working-directory: gitlab-repo  
         run: |  
+          cd gitlab-repo || exit 1
+          git init
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b Misaka-blog
           git add .
           git commit -m "${{ env.RELEASE_NAME }}"
