@@ -1,4 +1,4 @@
-name: Sync from gitlab.com/fscarmen/warp to GitHub  
+name: Sync from gitlab.com/fscarmen to GitHub  
   
 on:  
   workflow_dispatch:  
