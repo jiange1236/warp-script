@@ -27,7 +27,7 @@ jobs:
       - name: Checkout to new branch and push to GitHub  
         run: |  
           cd gitlab-repo || exit 1
-          rm -rf .git
+          rm -rf .git .github
           git init
           git checkout -b Misaka-blog
           git add .
