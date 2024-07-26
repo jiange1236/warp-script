@@ -27,10 +27,10 @@ jobs:
       - name: Checkout to new branch and push to GitHub  
         working-directory: gitlab-repo  
         run: |  
-          git checkout -b Misaka-blog  
-          git add .  
-          git commit -m "${{ env.RELEASE_NAME }}"  
-          git remote add github "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"  
-          git push -f -u github HEAD:Misaka-blog
+          git checkout -b Misaka-blog
+          git add .
+          git commit -m "${{ env.RELEASE_NAME }}"
+          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push -f -u origin Misaka-blog
         env:  
           RELEASE_NAME: "Released on $(date +%Y%m%d%H%M)"  
